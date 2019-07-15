@@ -1,0 +1,20 @@
+<h1>Players on Team
+<%user=Helpers.current_user(session)%>
+
+<%=user.username%></h1>
+<h3>Players</h3>
+
+<%@players.each do |player|%>
+  <h4> <%=player.firstname%> <%=player.lastname%>, <%=player.position%>
+    <form action="/players/<%=player.id%>/edit" method="get">
+     <input type="submit" name="submit" value="Edit Player">
+
+
+   </form>
+   <form action="/players/<%=player.id%>" method="post">
+     <input type="hidden" name="_method" value="delete">
+     <input type="submit" value="Delete Player">
+   </form>
+ </h4>
+
+  <%end%>

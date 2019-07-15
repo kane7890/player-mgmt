@@ -1,0 +1,18 @@
+<h2>Player:</h2>
+
+<p>ID:<%=@player.id%></p>
+<p>First Name:<%=@player.firstname%></p>
+<p>Last Name:<%=@player.lastname%></p>
+<p>Position:<%=@player.position%></p>
+
+
+
+<form action="/players/<%=@player.id%>/edit" method="get">
+  <input type="submit" value="Edit Player">
+</form>
+<br>
+<form action="/players/<%=@player.id%>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Player">
+</form>
+<!-- <a href="/tweets/<%=@player.id%>/delete">Delete Tweet</a> -->

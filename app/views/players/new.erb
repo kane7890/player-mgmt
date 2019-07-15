@@ -1,0 +1,21 @@
+
+<% if Helpers.is_logged_in?(session) %>
+ Add New Player to Team
+<%= @error %>
+  <form action='/players' method="post">
+    First Name:
+      <input type="text" name="firstname"><br>
+    Last Name:
+    <input type="text" name="lastname"><br>
+    Position:
+    <input type="text" name="position"><br>
+
+    <input type="submit" name="submit" id="submit">
+
+    <!-- <input type="submit" name="submit"> -->
+
+  </form>
+
+  <% else %>
+      <h1> You Must Be Logged in to Add Players </h1>
+  <% end %>
