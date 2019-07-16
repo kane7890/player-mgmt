@@ -1,4 +1,6 @@
 <h4> Player:</h4>
+
+<!-- form for entering changes to the player fields based on existing field data -->
 <form action="/players/<%=@player.id%>" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
 
@@ -9,9 +11,9 @@
   <label>Position:</label>
   <input type=”text” name="position" value=<%=@player.position%>>
   <label>Owner/User ID</label>
-  <input type=”text” name="user_id" value=<%=@player.user_id%>> 
+  <input type=”text” name="user_id" value=<%=@player.user_id%>>
 
-
+<!-- Button for submitting edited data back to the route which called it -->
 
   <input type="submit" value="submit">
 

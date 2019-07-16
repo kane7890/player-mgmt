@@ -5,6 +5,7 @@ if ActiveRecord::Migrator.needs_migration?
 end
 
 use Rack::MethodOverride
+# PlayersController and UsersController are used, in addition to running ApplicationController
 use PlayersController
 use UsersController
 run ApplicationController

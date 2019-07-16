@@ -1,6 +1,9 @@
-
+<!--home page for each user -->
 <h2>You are logged in as <%=@user.username%></h2>
 
-
+<!--options for adding players to a team and listing team players -->
 <li><a href="/players/new">Add New Player to User <%=@user.username%>'s team</li><br>
 <li><a href="/players">List players for User <%=@user.username%>'s team</li><br>
+
+<!--option for logging out -->
+<li><a href="/logout">Owner/User Logout</a><li>

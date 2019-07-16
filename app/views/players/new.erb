@@ -1,7 +1,9 @@
-
+<!--form for adding new player to owner/user's team -->
+<!-- check if user is logged in -->
 <% if Helpers.is_logged_in?(session) %>
  Add New Player to Team
 <%= @error %>
+<!--get firstname, lastname, and position-->
   <form action='/players' method="post">
     First Name:
       <input type="text" name="firstname"><br>
@@ -17,5 +19,6 @@
   </form>
 
   <% else %>
+  <!--if user is not logged in, give error message -->
       <h1> You Must Be Logged in to Add Players </h1>
   <% end %>

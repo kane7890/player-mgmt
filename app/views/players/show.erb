@@ -1,12 +1,14 @@
+<!--player show page, includes buttons for editing and deleting player -->
 <h2>Player:</h2>
 
+<!--display user information -->
 <p>ID:<%=@player.id%></p>
 <p>First Name:<%=@player.firstname%></p>
 <p>Last Name:<%=@player.lastname%></p>
 <p>Position:<%=@player.position%></p>
 
 
-
+<!--provide buttons for editing and deleting each player -->
 <form action="/players/<%=@player.id%>/edit" method="get">
   <input type="submit" value="Edit Player">
 </form>
